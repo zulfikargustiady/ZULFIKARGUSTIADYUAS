@@ -1,0 +1,513 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #7fa1ff;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button {
+    background-color: #7fa1ff;
+    color: #000000;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: #99ccff;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #000000;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #7fa1ff;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }    
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.455), rgba(0,0,0,0.411)), url(../img/buku-1.jpg) no-repeat center / cover;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .info h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.container .info p {
+    font-size: 1.5rem;
+}
+
+.lesgow-button {
+    background-color: #7fa1ff;
+    color: #000000;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.lesgow-button:hover {
+    background-color: #99ccff;
+}
+
+.about-section {
+    padding: 80px 0;
+}
+
+.about-text {
+    text-align: justify;
+}
+
+.mission-vision {
+    margin-top: 30px;
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #7fa1ff;
+}
+
+.heading p {
+    font-size: 18px;
+    color: #666777;
+    margin-bottom: 35px;
+}
+
+.container-about {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-bottom: 35px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666777;
+}
+
+@media screen and (max-width: 768px){
+    .heading {
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+    }
+    .container-about {
+        padding: 0px;
+    }
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+}
+
+.container-service {
+    min-height: 50px;
+    width: 100%;
+    background-color: #666777;
+}
+
+.service-wrapper {
+    padding: 5% 8%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h1 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.service h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #7fa1ff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card-service {
+    height: 350px;
+    width: 370px;
+    background-color: #fff;
+    padding: 3% 8%;
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-service:after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: #666777;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.card-service:hover:after {
+    width: 225%;
+    top: -100%;
+}
+
+.card-service i {
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+.card-service h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width:1200px){
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}@media screen and (max-width:900px){
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .service h1{
+        font-size: 3.5rem;
+    }
+}
+
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 40px auto;
+    background-color: #7fa1ff;
+    border-radius: 10px;
+    padding: 40px 40px;
+}
+
+.left-column {
+    width: 45%;
+    padding: 10px;
+}
+
+.right-column {
+    width: 45%;
+    padding: 20px;
+    background-color: #99ccff;
+    border-radius: 10px;
+}
+
+.contact {
+    color: #000000;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e3d9bf;
+    outline-color: #e3d9bf;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+textarea {
+    height: 100px;
+}
+
+.btn-send {
+    width: 125px;
+    display: inline-block;
+    color: #000000;
+    background-color: #99ccff;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.content-contact {
+    text-align: center;
+    padding: 25px;
+}
+
+.content-contact h1 {
+    font-size: 32px;
+    color: #000000;
+}
+
+.content-contact p {
+    margin: 8px 0px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-contact h2 {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-column {
+        width: 85%;
+    }
+    .right-column {
+        width: 85%;
+        margin-top: 25px;
+    }
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+/* .container-product {
+    text-align: center;
+}
+
+.container-product h1 {
+    color: #000000;
+    font-size: 50px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.container-product h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #7fa1ff;
+}
+
+.product-card {
+    margin-bottom: 20px;
+} */
+
+
+
+/* .card-img-top {
+    border-radius: 50px;
+    padding: 20px;
+} */
+
+/* .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card-container .card-product {
+    width: 325px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} */
+
+
+/* header.container-fluid {
+    background-image: url(../img/PerpustakaanDaerahKlaten.jpg);
+    padding: 70px 30px 70px 30px;
+    height: 350px;
+}
+
+.row-header {
+    margin: 0px auto;
+} */
